@@ -1,3 +1,4 @@
-#HOLA
-#Hola mundo prueba de sonido
-#hola
+print("Bienvenidos")
+
+while True:
+    pass
