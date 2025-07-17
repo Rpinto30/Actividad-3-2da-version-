@@ -10,7 +10,7 @@ class Login:
         else:
             print(f"El docente {teacher} ya ha sido agregado previamente.")
 
-    def edit_user(self, teacher, new_teacher):
+    def edit_name(self, teacher, new_teacher):
         if teacher in self.login:
             code = self.login[teacher] #Ayuda a que no se genere error al ingresar los datos en el diccionario
             del self.login[teacher]
@@ -18,6 +18,13 @@ class Login:
             print(self.login)
         else:
             print("No se ha actualizado correctamente el docente en el listado")
+
+    def edit_code(self,code, new_code):
+        if code in self.login:
+            teacher = self.login[code]
+            del self.login[code]
+            self.login[new_code] = teacher
+            print(self.login)
 
 
 
