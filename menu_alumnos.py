@@ -2,7 +2,7 @@
 from cursos import Course
 from alumnos import Alumnos
 
-def alumnos_menu(alum, cour):
+def alumnos_menu(alum):
     while True:
         print("----Menu Alumnos----\n"
               "\n1. Consultar notas\n"
@@ -12,11 +12,16 @@ def alumnos_menu(alum, cour):
         option = input("\nIngresa una opcion: ")
         if option == "1":
             print("---Cursos---nota---docente")
-            for i in alum.course:
-                print(f"{i.name}, {i.score}, {i.teacher}")
+            if len(alum.cursos) > 0:
+                for i in alum.course: #ciclo for para mostrar lo contenido en la lista de curso
+                    print(f"{i.name}, {i.score}, {i.teacher}")
+            else:
+                print("No hay cursos asignadoos")
+
         elif option == "2":
-            for num,i in enumerate(cour):
-                print(f"  {int(num)+1})Nombre: {i.name}, docente: {i.teacher.name}, creditos: {i.credits}")
+            cours = input("\nIngrese a que curso se quiere asignar: ").lower()
+            cat = input("escoge al catedratico: ")
+            alum.course.append(Course(cours, cat, 0))
 
             cours = int(input("\nIngrese a que curso se quiere asignar: "))
             if cours <=  int(num)+1: alum.course.append([cour[num-1], 0])
