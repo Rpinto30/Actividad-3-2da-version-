@@ -1,5 +1,5 @@
 # login teachers
-
+from profesor import Teacher
 # Definicion de variables
 
 def menu_login(teachers, students):
@@ -17,7 +17,9 @@ def menu_login(teachers, students):
         if option == "1":
             teacher = input("Ingresa el nombre del docente: ")
             code = input("Ingresa el código de identificación del docente: ")
-            teachers.append()
+            password = input("Ingresa una contraseña por favor: ")
+            course = input("Ingrese el curso que imparte: ")
+            teachers.append(Teacher(teacher, password, course,[], code))
             print("El usuario ha sido agregado correctamente.")
 
         elif option == "2":
