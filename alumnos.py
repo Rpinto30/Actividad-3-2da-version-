@@ -1,3 +1,8 @@
 # rama de alumnos en el programa
 
-print("YA FUNCINONAAAAAAAAAAAAAAAAAAAAA")
+class Alumnos:
+    def __init__(self, name:str, password:str, course:list):
+        self.name = name
+        self.password = password
+        self.course = course
+
