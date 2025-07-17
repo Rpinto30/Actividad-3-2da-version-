@@ -29,3 +29,9 @@ while True:
         new_code = input("Ingresa el nuevo código: ")
         c.edit_code(code)
 
+    elif: option == "4":
+        print("Has salido del login correctamente.")
+        break
+    else:
+        print("Opcion inválidda, intentalo de nuevo.")
+
