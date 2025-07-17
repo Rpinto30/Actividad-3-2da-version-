@@ -8,7 +8,8 @@ def alumnos_menu(alum):
               "4. Salir")
         option = input("\nIngresa una opcion: ")
         if option == "1":
-            print(alum.course[0].score)
+            for i in alum.course:
+                print(i.name, i.score)
         elif option == "2":
             pass
         elif option == "3":
