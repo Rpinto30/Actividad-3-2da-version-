@@ -5,10 +5,15 @@ MENU PRINCIPAL
 from menu_alumnos import alumnos_menu
 from alumnos import Alumnos
 from cursos import Course
+from profesor import Teacher
+
+
+teacher = [Teacher("Osmar", "12345")]
 
 students = [Alumnos("Rodrigo", "1505925","12345",
-                    [Course ("Matematicas", "Osmio", "85"), Course ("Ingles", "Dodo", "93")],)]
-teacher = []
+                    [Course ("Matematicas", teacher[0], "85"),
+                     Course ("Ingles", teacher[1], "93")],)]
+
 
 print("-"*10+"Bienvenidos"+"-"*10)
 while True:
