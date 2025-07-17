@@ -1,0 +1,31 @@
+# login teachers
+
+def menu_login():
+    print("\n Bienvenido al menú")
+    print("1. Ingresar nuevo usuario")
+    print("2. Modificar nombre de usuario existente")
+    print("3. Modificar código de usuario existente")
+    print("4. Salir del menú")
+
+
+while True:
+    menu_login()
+
+    option = input("Ingresa la opción que deseas ejecutar (1-3")
+
+    if option == "1":
+        teacher = input("Ingresa el nombre del docente: ")
+        code = input("Ingresa el código de identificación del docente: ")
+        u.add_user(teacher, code)
+        print("El usuario ha sido agregado correctamente.")
+
+    elif option == "2":
+        teacher = input("Ingrese el nombre del docente el cual desea modificar: ")
+        new_teacher = input("Ingresa el nuevo nombre del docente: ")
+        t.edit_name(teacher)
+
+    elif option == "3":
+        code = input("Ingresa el código que deseas modificar: ")
+        new_code = input("Ingresa el nuevo código: ")
+        c.edit_code(code)
+
