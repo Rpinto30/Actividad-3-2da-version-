@@ -8,11 +8,12 @@ from cursos import Course
 from profesor import Teacher
 
 
-teacher = [Teacher("Osmar", "12345")]
+teacher = [Teacher("Osmar", "12345",
+                   Course ("Matematicas", 'Hola'))]
 
 students = [Alumnos("Rodrigo", "1505925","12345",
-                    [Course ("Matematicas", teacher[0], "85"),
-                     Course ("Ingles", teacher[1], "93")],)]
+                    [Course ("Matematicas", teacher[0]),
+                     Course ("Ingles", teacher[1])],)]
 
 
 print("-"*10+"Bienvenidos"+"-"*10)
