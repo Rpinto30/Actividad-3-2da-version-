@@ -2,6 +2,13 @@
 MENU PRINCIPAL
 '''
 
+from menu_alumnos import alumnos_menu
+from alumnos import Alumnos
+from cursos import Course
+
+students = []
+teacher = []
+
 print("-"*10+"Bienvenidos"+"-"*10)
 while True:
     print("Opciones:" +
@@ -11,7 +18,7 @@ while True:
     if op == 1:
         pass
     elif op == 2:
-        pass
+        #alumnos_menu(students, teacher)
     elif op == 3:
         pass
     else:
