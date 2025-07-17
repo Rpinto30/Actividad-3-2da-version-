@@ -6,7 +6,7 @@ from menu_alumnos import alumnos_menu
 from alumnos import Alumnos
 from cursos import Course
 
-students = []
+students = [Alumnos("Rodrigo", "12345", [Course ("Matematicas", "Osmio", "85")])]
 teacher = []
 
 print("-"*10+"Bienvenidos"+"-"*10)
