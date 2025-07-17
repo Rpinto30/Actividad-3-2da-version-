@@ -12,16 +12,16 @@ def alumnos_menu(alum):
         option = input("\nIngresa una opcion: ")
         if option == "1":
             print("---Cursos---nota---docente")
-            for i in alum.course:
+            for i in alum.course: #ciclo for para mostrar lo contenido en la lista de curso
                 print(f"{i.name}, {i.score}, {i.teacher}")
         elif option == "2":
             cours = input("\nIngrese a que curso se quiere asignar: ").lower()
             cat = input("escoge al catedratico: ")
-            alum.course.append(Course(cours, cat, 0))
+            alum.course.append(Course(cours, cat, 0)) # Guardar el input dentro de la lista curso
 
         elif option == "3":
-            print("---Nombre---Carnet---")
-            print(alum.name, alum.card)
+            print("--Nombre--Carnet---\n")
+            print(alum.name, alum.card) #imprime los datos del estudiante con el impor alumnos
         elif option == "4":
             print("\nRegresando al menu principal")
             break
