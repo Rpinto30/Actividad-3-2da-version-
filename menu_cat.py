@@ -4,10 +4,10 @@ from alumnos import Alumnos
 def menu_cat(cat, courses):
     while True:
         print(f"\n----Menu Catedraticos, Bienvenido {cat.name}----" +
-              "\n  1) Agregar nota\n  2) Mostrar alumnos\n  3) Mostrar promedios\n  4) Salir")
+              "\n  1) Agregar nota\n  2) Mostrar alumnos\n  3) Salir")
         op = int(input("Elige una de las siguientes opciones: "))
 
-        if op == 1:
+        if op == 1: #actualizar notas
             while True:
                 est = input("Porfavor, ingresa el carnet del estudiante: ")
                 estu, c  = None, None
@@ -36,18 +36,14 @@ def menu_cat(cat, courses):
                     print(f"La nueva nota de {estu.name} en el curso de {c.name} es {nota[1]}")
                     break
         elif op == 2:
-            print("Mostar alumnos")
-            if cat.alums > 0:
-                for i in cat.alums:
-                    #for j in i.course:
-
-
-                    print(f"{'Nombre':<20}{'Carnet':<30}{'Nota':<20}")
-                    print(f"{i.name:<20}{i.card:<30}{i.course:<20}")
-            else:
-                print("No existen alumnos asignados a este profesor")
-        elif op == 3:
-            pass
-
+            for cou in courses:
+                if cou.teacher.code == cat.code:
+                    if len(cou.alums) > 0:
+                        for i in cou.alums:
+                            print(f"{'Nombre':<20}{'Carnet':<30}")
+                            print(f"{i.name:<20}{i.card:<30}")
+                    else:
+                        print("No existen alumnos asignados a este profesor")
+                        break
         else:
             break

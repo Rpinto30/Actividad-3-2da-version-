@@ -23,7 +23,8 @@ courses = [
 
 students = [Alumnos("Rodrigo", "0","12345",[])]
 
-#courses[0].alums.append(students[0])
+courses[0].alums.append(students[0])
+students[0].course.append([courses[0], 0])
 
 print("-"*10+"Bienvenidos"+"-"*10)
 while True:
@@ -46,7 +47,11 @@ while True:
             if i.card == log and i.password == pasw:
                 alumnos_menu(i, courses)
     elif op == 3:
-        pass
+        print("----Menú de administrador----")
+        print("  1) Soy administrativo\n  2) No soy administrativo")
+        op_adm = int(input("Usted es un administrativo?: "))
+        if op_adm == 1:
+            pass
     else:
         break
 
