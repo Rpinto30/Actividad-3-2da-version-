@@ -1,5 +1,5 @@
 # Creacion menu de alumnos
-def alumnos_menu(alumnos:list, teachers:list):
+def alumnos_menu(alum):
     while True:
         print("----Menu Alumnos----\n"
               "\n1. Consultar notas\n"
@@ -8,7 +8,8 @@ def alumnos_menu(alumnos:list, teachers:list):
               "4. Salir")
         option = input("\nIngresa una opcion: ")
         if option == "1":
-            pass
+            for i in alum.course:
+                print(i.name, i.score)
         elif option == "2":
             pass
         elif option == "3":
