@@ -19,3 +19,4 @@ def alumnos_menu(alumnos:list, teachers:list):
         else:
             print("Ingresa una opcion valida")
 
+
