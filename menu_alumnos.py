@@ -38,5 +38,3 @@ def alumnos_menu(alum):
             break
         else:
             print("Ingresa una opcion valida")
-
-
