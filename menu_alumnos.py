@@ -12,8 +12,12 @@ def alumnos_menu(alum):
         option = input("\nIngresa una opcion: ")
         if option == "1":
             print("---Cursos---nota---docente")
-            for i in alum.course: #ciclo for para mostrar lo contenido en la lista de curso
-                print(f"{i.name}, {i.score}, {i.teacher}")
+            if len(alum.cursos) > 0:
+                for i in alum.course: #ciclo for para mostrar lo contenido en la lista de curso
+                    print(f"{i.name}, {i.score}, {i.teacher}")
+            else:
+                print("No hay cursos asignadoos")
+
         elif option == "2":
             cours = input("\nIngrese a que curso se quiere asignar: ").lower()
             cat = input("escoge al catedratico: ")
