@@ -19,7 +19,9 @@ def alumnos_menu(alum, courses):
             for num,i in enumerate(courses): print(f"  {num+1})Nombre:{i.name}  Catedratico:{i.teacher.name}  Creditos:{i.credits}")
 
             cours = int(input("\nIngrese a que curso se quiere asignar: "))
-            if cours <=  int(num)+1: alum.course.append([courses[cours-1], 0])
+            if cours <=  int(num)+1:
+                alum.course.append([courses[cours-1], 0])
+                courses[cours-1].alums.append(alum)
             else: print("Lo siento, entrada invalida")
 
             print("Curso asignado!")
