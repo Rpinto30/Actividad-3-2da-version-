@@ -21,10 +21,20 @@ def menu_cat(cat):
                     break
 
                 no = int(input("Ingrese la nota modificada del estudiante: "))
-
+                #MODIFICAR NOTA
         elif op == 2:
-            pass
+            print("Mostar alumnos")
+            if cat.alums > 0:
+                for i in cat.alums:
+                    #for j in i.course:
+
+
+                    print(f"{'Nombre':<20}{'Carnet':<30}{'Nota':<20}")
+                    print(f"{i.name:<20}{i.card:<30}{i.course:<20}")
+            else:
+                print("No existen alumnos asignados a este profesor")
         elif op == 3:
             pass
+
         else:
             break

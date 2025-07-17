@@ -1,5 +1,4 @@
 class Course:
-    def __init__(self, name, teacher, score):
+    def __init__(self, name, teacher):
         self.name = name
         self.teacher = teacher
-        self.score = score
