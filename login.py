@@ -16,4 +16,8 @@ class Login:
             del self.login[teacher]
             self.login[new_teacher] = code # Se ingresan los datos en el diccionario en el orden correcto
             print(self.login)
+        else:
+            print("No se ha actualizado correctamente el docente en el listado")
+
+
 
