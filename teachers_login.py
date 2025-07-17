@@ -70,6 +70,17 @@ def menu_login(teachers, students, courses):
 
         elif option == "4":
             print("+"*15+"ESTUDIANTES REGISTRADOS"+"+"*15)
+            print(f"{'Nombre':<30}{'Carnet':<10}{'Contraseña':<10}")
+            for i in students: print(f"{i.name:<30}{i.card:<10}{i.password:<10}")
+            print("-"*50)
+            print("+" * 15 + "PROFESORES REGISTRADOS" + "+" * 15)
+            print(f"{'Nombre':<30}{'Codigo':<10}{'Contraseña':<10}")
+            for j in teachers: print(f"{j.name:<30}{j.code:<10}{j.password:<10}")
+            print("-" * 50)
+            print("+" * 15 + "CURSOS REGISTRADOS" + "+" * 15)
+            print(f"{'Nombre':<30}{'Creditos':<10}{'ID':<10}")
+            for k in courses: print(f"{k.name:<30}{k.credits:<10}{k.id:<10}")
+            print("-" * 50)
 
         elif option == "5":
             print("Has salido del login correctamente.")

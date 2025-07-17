@@ -13,7 +13,7 @@ from profesor import Teacher
 teacher = [
     Teacher("Osmar", "12345", "cat123"),
     Teacher("Miguel", "Hola128op", "cat259"),
-    Teacher("Luis", "Adios152", "cat010")
+    Teacher("Jorge Tello", "Adios152", "cat010")
 
 ]
 
@@ -23,7 +23,11 @@ courses = [
     Course('Magis', teacher[1], 1, 2, [])
 ]
 
-students = [Alumnos("Rodrigo", "0","12345",[])]
+students = [
+    Alumnos("Rodrigo Herman", "1505925","12345678",[]),
+    Alumnos("Aileen", "1541925","12345678",[]),
+    Alumnos("Rodrigo Pinto", "0","12345",[])
+]
 
 courses[0].alums.append(students[0])
 students[0].course.append([courses[0], 0])
