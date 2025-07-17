@@ -4,6 +4,8 @@ MENU PRINCIPAL
 
 from menu_alumnos import alumnos_menu
 from menu_cat import menu_cat
+from teachers_login import menu_login
+
 from alumnos import Alumnos
 from cursos import Course
 from profesor import Teacher
@@ -29,7 +31,7 @@ students[0].course.append([courses[0], 0])
 print("-"*10+"Bienvenidos"+"-"*10)
 while True:
     print("Opciones:" +
-          "\n  1) Catedratico\n  2) Alumnos\n  3) Crear nuevo usuario\n  4) Salir")
+          "\n  1) Catedratico\n  2) Alumnos\n  3) Administrador\n  4) Salir")
     op = int(input("Elige una de las siguientes opciones: "))
 
     if op == 1: #CATEDRATICOS
@@ -51,7 +53,7 @@ while True:
         print("  1) Soy administrativo\n  2) No soy administrativo")
         op_adm = int(input("Usted es un administrativo?: "))
         if op_adm == 1:
-            pass
+            menu_login(teacher, students, courses)
     else:
         break
 
