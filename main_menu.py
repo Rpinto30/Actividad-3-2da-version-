@@ -5,6 +5,8 @@ MENU PRINCIPAL
 from menu_alumnos import alumnos_menu
 from alumnos import Alumnos
 from cursos import Course
+from profesor import Teacher
+
 
 students = [Alumnos("Rodrigo", "1505925","12345",
                     [Course ("Matematicas", "Osmio", "85"), Course ("Ingles", "Dodo", "93")],)]
