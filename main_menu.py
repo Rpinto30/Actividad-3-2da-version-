@@ -6,7 +6,7 @@ from menu_alumnos import alumnos_menu
 from alumnos import Alumnos
 from cursos import Course
 
-students = [Alumnos("Rodrigo", "12345", [Course ("Matematicas", "Osmio", "85")])]
+students = [Alumnos("Rodrigo", "1505925","12345", [Course ("Matematicas", "Osmio", "85")])]
 teacher = []
 
 print("-"*10+"Bienvenidos"+"-"*10)
@@ -18,7 +18,12 @@ while True:
     if op == 1:
         pass
     elif op == 2:
-        #alumnos_menu(students, teacher)
+        log = input("Ingrese su carnet:")
+        pasw = input("Ingrese su contraseña")
+
+        for i in students:
+            if i.card == log and i.password == pasw:
+                alumnos_menu(i)
         pass
     elif op == 3:
         pass
