@@ -16,14 +16,12 @@ teacher = [
 
 
 courses = [
-    Course('Calculo', teacher[0]),
-    Course('Programación', teacher[2]),
-    Course('Magis', teacher[1])
+    Course('Calculo', teacher[0], 5, 0),
+    Course('Programación', teacher[2], 2, 1),
+    Course('Magis', teacher[1], 1, 2)
 ]
 
-students = [Alumnos("Rodrigo", "1505925","12345",
-                    [Course ("Matematicas", teacher[0]),
-                     Course ("Ingles", teacher[0])],)]
+students = [Alumnos("Rodrigo", "1","12345",[])]
 
 
 print("-"*10+"Bienvenidos"+"-"*10)
@@ -40,7 +38,7 @@ while True:
 
         for i in students:
             if i.card == log and i.password == pasw:
-                alumnos_menu(i)
+                alumnos_menu(i, courses)
         pass
     elif op == 3:
         pass
