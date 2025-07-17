@@ -7,9 +7,19 @@ from alumnos import Alumnos
 from cursos import Course
 from profesor import Teacher
 
+teacher = [
+    Teacher("Osmar", "12345", "cat123"),
+    Teacher("Miguel", "Hola128op", "cat259"),
+    Teacher("Luis", "Adios152", "cat010")
 
-teacher = [Teacher("Osmar", "12345",
-                   Course ("Matematicas", 'Hola'), [])]
+]
+
+
+courses = [
+    Course('Calculo', teacher[0]),
+    Course('Programación', teacher[2]),
+    Course('Magis', teacher[1])
+]
 
 students = [Alumnos("Rodrigo", "1505925","12345",
                     [Course ("Matematicas", teacher[0]),
