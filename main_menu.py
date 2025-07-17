@@ -21,7 +21,7 @@ courses = [
     Course('Magis', teacher[1], 1, 2)
 ]
 
-students = [Alumnos("Rodrigo", "1","12345",[])]
+students = [Alumnos("Rodrigo", "0","12345",[])]
 
 
 print("-"*10+"Bienvenidos"+"-"*10)
