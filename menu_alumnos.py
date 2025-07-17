@@ -1,4 +1,6 @@
 # Creacion menu de alumnos
+from cursos import Course
+
 def alumnos_menu(alum):
     while True:
         print("----Menu Alumnos----\n"
@@ -11,7 +13,10 @@ def alumnos_menu(alum):
             for i in alum.course:
                 print(i.name, i.score)
         elif option == "2":
-            pass
+            cours = input("\nIngrese a que curso se quiere asignar: ").lower()
+            cat = input("escoge al catedratico: ")
+            alum.course.append(Course(cours, cat, 0))
+
         elif option == "3":
             pass
         elif option == "4":
